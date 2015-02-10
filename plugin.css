@@ -1,0 +1,69 @@
+/*
+    PluginDraft CSS styles
+*/
+
+.plugindraft {
+}
+
+/* NOTICE message */
+.plugindraft-notice {
+    display: table;
+    margin: 2px 0;
+    border: 1px solid #777;
+    background-color: #eee;
+    font-size: 12px;
+}
+.plugindraft-notice div {
+    display: table-cell;
+    padding: 2px 6px;
+    color: white;
+    background-color: #777;
+    height: inherit;
+}
+.plugindraft-notice span {
+    display: table-cell;
+    padding: 2px 4px;
+    color: #777;
+}
+
+/* SUCCESS message */
+.plugindraft-success {
+    display: table;
+    margin: 2px 0;
+    border: 1px solid #2a0;
+    background-color: #efe;
+    font-size: 12px;
+}
+.plugindraft-success div {
+    display: table-cell;
+    padding: 2px 6px;
+    color: white;
+    background-color: #2a0;
+    height: inherit;
+}
+.plugindraft-success span {
+    display: table-cell;
+    padding: 2px 4px;
+    color: #2a0;
+}
+
+/* ERROR message */
+.plugindraft-error {
+    display: table;
+    margin: 2px 0;
+    border: 1px solid #f33;
+    background-color: #fee;
+    font-size: 12px;
+}
+.plugindraft-error div {
+    display: table-cell;
+    padding: 2px 6px;
+    color: white;
+    background-color: #f33;
+    height: inherit;
+}
+.plugindraft-error span {
+    display: table-cell;
+    padding: 2px 4px;
+    color: #f33;
+}

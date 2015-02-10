@@ -1,0 +1,4 @@
+tag          = Returns ...
+description  = Generates ... <br /><br /><span class='plugindraft-bold'>Use:</span><br /><span class='plugindraft-code'>{PARAM1}</span> Inserts ...<br /><br /><span class='plugindraft-pre'>&lt;attribute&gt;: </span>description ... <span class='plugindraft-pre'>...</span><br /><br /><span class='plugindraft-bold'>Documentation:</span><br />A detailed documentation can be found on <span class='plugindraft-italic'>devmount.de </span> (link above).
+admin_header = {PARAM1} Plugin Configuration
+on_devmount  = on devmount.de

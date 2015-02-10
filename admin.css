@@ -1,0 +1,51 @@
+.plugindraft-admin-header {
+    margin: -0.4em -0.8em -5px -0.8em;
+    padding: 10px;
+    background-color: #234567;
+    color: #fff;
+    text-shadow: #000 0 1px 3px;
+}
+.plugindraft-admin-header span {
+    font-size:20px;
+    vertical-align: top;
+    padding-top: 3px;
+    display: inline-block;
+}
+.plugindraft-admin-subheader {
+    margin: -0.4em -0.8em 5px -0.8em;
+    padding: 5px 9px;
+    background-color: #ddd;
+    color: #111;
+    text-shadow: #fff 0 1px 2px;
+}
+.plugindraft-admin-li {
+    background: #eee;
+}
+.plugindraft-admin-default {
+    color: #aaa;
+    padding-left: 6px;
+}
+.plugindraft-single-conf {
+    margin-bottom:5px;
+}
+.plugindraft-col-third {
+    width: 32%;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.plugindraft-bold {
+    font-weight: bold;
+}
+.plugindraft-code {
+    font-family: monospace;
+    margin: 3px 3px;
+    background-color: #eee;
+    border: 1px dotted #aaa;
+}
+.plugindraft-italic {
+    font-style: italic;
+}
+.plugindraft-pre {
+    font-family: monospace;
+}
