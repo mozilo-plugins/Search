@@ -1,4 +1,6 @@
-tag1         = Gibt ... zurück.
-description  = Generiert ... <br /><br /><span class='plugindraft-bold'>Nutzung:</span><br /><span class='plugindraft-code'>{PARAM1}</span> Fügt ... ein.<br /><br /><span class='plugindraft-pre'>&lt;attribut&gt;: </span>Attributbeschreibung ... <span class='plugindraft-pre'>...</span><br /><br /><span class='plugindraft-bold'>Dokumentation:</span><br />Eine ausführliche Dokumentation ist auf <span class="plugindraft-italic">devmount.de</span> zu finden (siehe obenstehender Link).
-admin_header = {PARAM1} Plugin Konfiguration
-on_devmount  = auf devmount.de
+tag1          = Gibt HTML des Searchformulars zurück.
+description   = Fügt das konfigurierte HTML des Suchformulars ein. <br /><br /><span class='plugindraft-bold'>Dokumentation:</span><br />Eine ausführliche Dokumentation ist auf <span class="plugindraft-italic">devmount.de</span> zu finden (siehe obenstehender Link).
+admin_header  = {PARAM1} Plugin Konfiguration
+on_devmount   = auf devmount.de
+admin_content = Inhalt
+config_html   = HTML des Suchformulars

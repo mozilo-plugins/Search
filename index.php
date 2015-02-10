@@ -1,7 +1,7 @@
 <?php
 
 /**
- * moziloCMS Plugin: PluginDraft
+ * moziloCMS Plugin: Search
  *
  * Does something awesome!
  *
@@ -12,8 +12,8 @@
  * @author   DEVMOUNT <mail@devmount.de>
  * @license  GPL v3+
  * @version  GIT: v0.x.jjjj-mm-dd
- * @link     https://github.com/devmount/PluginDraft
- * @link     http://devmount.de/Develop/moziloCMS/Plugins/PluginDraft.html
+ * @link     https://github.com/devmount/Search
+ * @link     http://devmount.de/Develop/moziloCMS/Plugins/Search.html
  * @see      Verse
  *           – The Bible
  *
@@ -28,15 +28,15 @@ if (!defined('IS_CMS')) {
 }
 
 /**
- * PluginDraft Class
+ * Search Class
  *
  * @category PHP
  * @package  PHP_MoziloPlugins
  * @author   DEVMOUNT <mail@devmount.de>
  * @license  GPL v3+
- * @link     https://github.com/devmount/PluginDraft
+ * @link     https://github.com/devmount/Search
  */
-class PluginDraft extends Plugin
+class Search extends Plugin
 {
     // language
     private $_admin_lang;
@@ -44,14 +44,14 @@ class PluginDraft extends Plugin
 
     // plugin information
     const PLUGIN_AUTHOR  = 'DEVMOUNT';
-    const PLUGIN_TITLE   = 'PluginDraft';
+    const PLUGIN_TITLE   = 'Search';
     const PLUGIN_VERSION = 'v0.x.jjjj-mm-dd';
     const MOZILO_VERSION = '2.0';
     const PLUGIN_DOCU
-        = 'http://devmount.de/Develop/moziloCMS/Plugins/PluginDraft.html';
+        = 'http://devmount.de/Develop/moziloCMS/Plugins/Search.html';
 
     private $_plugin_tags = array(
-        'tag1' => '{PluginDraft|type|<param1>|<param2>}',
+        'tag1' => '{Search}',
     );
 
     const LOGO_URL = 'http://media.devmount.de/logo_pluginconf.png';
@@ -69,42 +69,12 @@ class PluginDraft extends Plugin
      *      select   => default, type, descriptions, multiselect
      */
     private $_confdefault = array(
-        'text' => array(
-            'string',
-            'text',
-            '100',
-            '5',
-            "/^[0-9]{1,3}$/",
-        ),
-        'textarea' => array(
-            'string',
+        'html' => array(
+            '',
             'textarea',
-            '10',
-            '10',
-            "/^[a-zA-Z0-9]{1,10}$/",
-        ),
-        'password' => array(
-            'string',
-            'password',
             '100',
-            '5',
-            "/^[a-zA-Z0-9]{8,20}$/",
-            true,
-        ),
-        'check' => array(
-            'true',
-            'check',
-        ),
-        'radio' => array(
-            'red',
-            'radio',
-            array('red', 'green', 'blue'),
-        ),
-        'select' => array(
-            'bike',
-            'select',
-            array('car','bike','plane'),
-            false,
+            '15',
+            "",
         ),
     );
 
@@ -131,11 +101,6 @@ class PluginDraft extends Plugin
         // get language labels
         $label = $this->_cms_lang->getLanguageValue('label');
 
-        // get params
-        list($param_1, $param_2) = explode('|', $value);
-        $param_1 = trim($param_1);
-        $param_2 = trim($param_2);
-
         // get conf and set default
         $conf = array();
         foreach ($this->_confdefault as $elem => $default) {
@@ -144,18 +109,12 @@ class PluginDraft extends Plugin
                 : $this->settings->get($elem);
         }
 
-        // include jquery and PluginDraft javascript
-        $syntax->insert_jquery_in_head('jquery');
-        $syntax->insert_in_head(
-            '<script type="text/javascript" src="'
-            . $this->PLUGIN_SELF_URL
-            . 'js/PluginDraft.js"></script>'
-        );
-
         // initialize return content, begin plugin content
         $content = '<!-- BEGIN ' . self::PLUGIN_TITLE . ' plugin content --> ';
 
-        // do something awesome here! ...
+        $html = str_replace('<br />', '', $conf['html']);
+
+        $content .= $html;
 
         // end plugin content
         $content .= '<!-- END ' . self::PLUGIN_TITLE . ' plugin content --> ';
@@ -263,7 +222,7 @@ class PluginDraft extends Plugin
 
         // build Template
         $template .= '
-            <div class="plugindraft-admin-header">
+            <div class="search-admin-header">
             <span>'
                 . $this->_admin_lang->getLanguageValue(
                     'admin_header',
@@ -275,23 +234,13 @@ class PluginDraft extends Plugin
             </a>
             </div>
         </li>
-        <li class="mo-in-ul-li ui-widget-content plugindraft-admin-li">
-            <div class="plugindraft-admin-subheader">'
-            . $this->_admin_lang->getLanguageValue('admin_test')
+        <li class="mo-in-ul-li ui-widget-content search-admin-li">
+            <div class="search-admin-subheader">'
+            . $this->_admin_lang->getLanguageValue('admin_content')
             . '</div>
-            <div class="plugindraft-single-conf">
-                {test1_text}
-                {test1_description}
-                <span class="plugindraft-admin-default">
-                    [' . /*$this->_confdefault['test1'][0] .*/']
-                </span>
-            </div>
-            <div class="plugindraft-single-conf">
-                {test2_text}
-                {test2_description}
-                <span class="plugindraft-admin-default">
-                    [' . /*$this->_confdefault['test2'][0] .*/']
-                </span>
+            <div class="search-single-conf">
+                {html_description}<br />
+                {html_textarea}
         ';
 
         $config['--template~~'] = $template;
