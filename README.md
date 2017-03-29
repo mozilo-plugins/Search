@@ -1,4 +1,4 @@
-SEARCH
+Search
 ======
 
 A Plugin for moziloCMS 2.0
@@ -25,5 +25,5 @@ Inserts the Search HTML.
 This Plugin is distributed under *GNU General Public License, Version 3* (see LICENSE) or - at your choice - any further version.
 
 ## Documentation
-A detailed documentation and demo can be found on DEVMOUNT's website:
-http://t.devmount.de/Develop/moziloCMS/Plugins/Search.html
+A detailed documentation and demo can be found here:  
+https://github.com/devmount-mozilo/Search/wiki/Dokumentation
