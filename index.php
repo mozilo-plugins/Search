@@ -12,8 +12,7 @@
  * @author   DEVMOUNT <mail@devmount.de>
  * @license  GPL v3+
  * @version  GIT: v0.1.2015-02-10
- * @link     https://github.com/devmount-mozilo/Search
- * @link     http://devmount.de/Develop/moziloCMS/Plugins/Search.html
+ * @link     https://github.com/devmount-mozilo/Search/wiki/Dokumentation
  * @see      Ask and it will be given to you; seek and you will find; knock and the door will be opened to you.
  *           – The Bible
  *
@@ -48,7 +47,7 @@ class Search extends Plugin
     const PLUGIN_VERSION = 'v0.1.2015-02-10';
     const MOZILO_VERSION = '2.0';
     const PLUGIN_DOCU
-        = 'http://devmount.de/Develop/moziloCMS/Plugins/Search.html';
+        = 'https://github.com/devmount-mozilo/Search/wiki/Dokumentation';
 
     private $_plugin_tags = array(
         'tag1' => '{Search}',
